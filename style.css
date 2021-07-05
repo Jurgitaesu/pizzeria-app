@@ -1,0 +1,226 @@
+/* General styles */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* Form styles */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 350px;
+  height: auto;
+  margin: auto;
+}
+
+input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid gray;
+  padding: 10px 15px;
+  transition: 0.3s easy;
+  margin-bottom: 15px;
+  width: 80%;
+}
+
+input:hover,
+input:focus {
+  border-bottom: 2px solid orange;
+}
+
+.form-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.photos {
+  width: 100px;
+  margin: 10px;
+  border: 4px solid transparent;
+}
+
+#addTopping {
+  transition: 0.3ms;
+  transform: scale(1.05);
+}
+
+#addTopping:hover {
+  cursor: pointer;
+}
+
+.border {
+  border: 4px solid orange;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-150 {
+  width: 150px;
+}
+
+#message {
+  text-align: center;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+/* Pizzas container */
+
+.pizzasContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Pizza card styles */
+
+.pizza-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  -webkit-box-shadow: 0 0 9px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 9px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 9px -1px rgba(0, 0, 0, 0.75);
+  margin: 20px;
+  padding: 20px;
+}
+
+.chilli {
+  width: 20px;
+}
+
+/*** Buttons ***/
+
+.button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 3px;
+  text-align: center;
+  transition: 0.3s ease;
+  outline: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.button-orange {
+  background-color: orange;
+  color: white;
+  border: none;
+}
+
+.button-white {
+  font-size: 18px;
+  margin: 20px 10px;
+  background-color: white;
+  border: 2px solid orange;
+  color: black;
+}
+
+/*** Margins ***/
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+/*** Delete modal ***/
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888888;
+  width: 60%;
+  height: 40%;
+}
+
+.modal-content > img {
+  margin: auto;
+  display: block;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000000;
+}

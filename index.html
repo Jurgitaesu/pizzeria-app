@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzeria app</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h2>Add new pizza</h2>
+    <div id="message"></div>
+    <form class="form" action="#">
+      <div class="form-input">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div class="form-input">
+        <label for="price">Price: </label>
+        <input type="number" name="price" id="price" step="0.01" min="0.01" max="1000" />
+      </div>
+      <div class="form-input">
+        <label for="heat">Heat: </label>
+        <input type="number" name="heat" id="heat" min="1" max="3" />
+      </div>
+      <div class="form-input">
+        <label for="toppings" class="mr-20">Toppings: </label>
+        <ol class="ml-10" id="toppingInputs">
+          <li><input type="text" name="toppings" class="toppings formToppings" /></li>
+          <li><input type="text" name="toppings" class="toppings formToppings" /></li>
+        </ol>
+        <button id="addTopping" class="button button-white">+</button>
+      </div>
+      <label class="align-left" for="photo">Photo: </label>
+      <div class="d-flex">
+        <img src="./photos/photoOne.jpg" class="photos formPhotos" id="photoOne" alt="pizza" />
+        <img src="./photos/photoTwo.jpg" class="photos formPhotos" id="photoTwo" alt="pizza" />
+        <img src="./photos/photoThree.jpg" class="photos formPhotos" id="photoThree" alt="pizza" />
+      </div>
+      <button class="button button-orange" id="addButton">Add pizza</button>
+      <div id="updateButtons">
+        <button class="button button-orange mr-10 w-150" id="updateButton">Update pizza</button>
+        <button class="button button-orange ml-10 w-150" id="cancelButton">Cancel</button>
+      </div>
+    </form>
+    <div class="ml-10">
+      <p class="font-18 ml-10 mt-10">Sort by:</p>
+      <div>
+        <select id="sortOptions" class="button button-white">
+          <option class="sortOption" value="name" selected="true">name (Ascending)</option>
+          <option class="sortOption" value="price">price (from biggest to smallest)</option>
+          <option class="sortOption" value="heat">heat (from biggest to smallest)</option>
+        </select>
+        <button class="button button-orange" id="sortButton">Sort</button>
+      </div>
+    </div>
+    <div class="pizzasContainer"></div>
+    <div id="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">x</span>
+        <h2 class="mt-60">Are you sure you want to delete pizza?</h2>
+        <div class="buttons-container mt-60">
+          <button class="button button-white" id="confirmDelete">Yes</button>
+          <button class="button button-white" id="cancelDelete">No</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
